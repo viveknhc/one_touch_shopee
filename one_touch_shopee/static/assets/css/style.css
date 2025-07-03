@@ -627,6 +627,12 @@ header .navbar .nav-item .nav-link:hover {
   padding: 50px 0;
 }
 .cta .content-box {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   border-radius: 30px;
   background-image: url("../img/bg/cta.png");
   background-position: center;
@@ -645,6 +651,7 @@ header .navbar .nav-item .nav-link:hover {
   /* 156.25% */
   text-transform: capitalize;
   text-align: center;
+  margin: 0;
 }
 .cta .content-box h3 {
   color: #FFF;
@@ -656,6 +663,7 @@ header .navbar .nav-item .nav-link:hover {
   /* 156.25% */
   text-transform: capitalize;
   text-align: center;
+  margin: 0;
 }
 .cta .content-box .input-wrap {
   border-radius: 66px;
@@ -664,7 +672,6 @@ header .navbar .nav-item .nav-link:hover {
   width: -moz-fit-content;
   width: fit-content;
   width: 50%;
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -674,6 +681,7 @@ header .navbar .nav-item .nav-link:hover {
   border: none;
   background-color: transparent;
   padding: 10px 20px;
+  margin: 0;
 }
 .cta .content-box .input-wrap input:focus {
   border: none;
