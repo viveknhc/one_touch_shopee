@@ -27,18 +27,15 @@ var swiper = new Swiper(".productSwiper", {
 
     loop: true,
 
-    pagination: {
-        el: ".swiper-pagination",
-    },
 
     breakpoints: {
 
         200: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 20
         },
         640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 20
         },
         767: {
