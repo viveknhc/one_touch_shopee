@@ -45,14 +45,53 @@
         <div class="row align-items-center content-box">
 
             <div class="logo-box col-xl-3 col-lg-3 col-6 order-xl-0 order-lg-0 order-0  my-2">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="offcan-btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                     <img src="{% static 'assets/img/icons/menu.png' %}" alt="">
                 </button>
 
+                <div class="offcanvas offcanvas-start w-100" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                    aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+
+                         <i class="fa-regular fa-user"></i>
+                        <h5 class="offcanvas-title" id="staticBackdropLabel">Profile</h5>
+                       
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Brands</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">New Products</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " aria-disabled="true">Derma-Aesthetics consumables</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " aria-disabled="true">Dental consumables</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " aria-disabled="true">General consumables</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " aria-disabled="true">Beauty cosmetics & personal care</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
                 <a class="navbar-brand" href="#"><img src="{% static 'assets/img/logo.svg' %}" alt=""></a>
-                
+
             </div>
 
             <div class="col-xl-6 col-lg-6 col-12 order-xl-1 order-lg-1 order-2 my-2">

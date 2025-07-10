@@ -1,78 +1,221 @@
 <style>
-    .slider-box {
-        display: flex;
-        width: 90vw;
-    }
 
-    .panel {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 80vh;
-        border-radius: 50px;
-        color: #fff;
-        cursor: pointer;
-        flex: 0.5;
-        margin: 10px;
-        position: relative;
-        -webkit-transition: all 700ms ease-in;
-    }
+.slider-test {
+  display: flex;
+  width: 90vw;
+}
 
-    .panel h3 {
-        font-size: 24px;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        margin: 0;
-        opacity: 0;
-    }
+.panel {
+  min-height: 50vh;
+  height: auto;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  transition: flex 0.7s ease-in;
+  background: #d291bc;
+}
 
-    .panel.active {
-        flex: 5;
-    }
+.panel-content {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.7s ease-in;
+}
 
-    .panel.active h3 {
-        opacity: 1;
-        transition: opacity 0.3s ease-in 0.4s;
-    }
+.panel .image {
+  padding: 0;
+  margin: 0;
+  max-width: 250px;
+  max-height: 600px;
+}
+
+.panel .image .person {
+  max-width: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 900;
+}
+
+.name-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.rating .fa {
+  color: #ffd700;
+}
+
+.panel.active {
+  flex: 1;
+  background: #fff;
+}
+
+.panel.active .panel-content {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vh;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
 </style>
 
-<div class="slider-box">
-    <div class="panel active"
-        style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-        <h3>Explore The World</h3>
-    </div>
-    <div class="panel"
-        style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-        <h3>Wild Forest</h3>
-    </div>
-    <div class="panel"
-        style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80')">
-        <h3>Sunny Beach</h3>
-    </div>
-    <div class="panel"
-        style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')">
-        <h3>City on Winter</h3>
-    </div>
-    <div class="panel"
-        style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-        <h3>Mountains - Clouds</h3>
-    </div>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />  
 
-<script>
-    const panels = document.querySelectorAll('.panel')
+<h1> Testimonials</h1>
+  <div class="slider-test">
+    <div class="panel active" style="border: 1px solid #E0BBE4;"> 
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"></div>
+          <div class="name-container">
+            <div class="name">Alex Jordan</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+    <div class="panel" style="border: 1px solid #957DAD;">
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/1266193/pexels-photo-1266193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
+          <div class="name-container">
+            <div class="name">Adhira Agarwal</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+    <div class="panel" style="border: 1px solid #D291BC;">
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
+          <div class="name-container">
+            <div class="name">Andrea Williams</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+    <div class="panel" style="border: 1px solid #FEC8D8;">
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/3843382/pexels-photo-3843382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
+          <div class="name-container">
+            <div class="name">Leila Masterson</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+    <div class="panel" style="border: 1px solid#957DAD;">
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
+          <div class="name-container">
+            <div class="name">Taylor Kennedy</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+    <div class="panel" style="border: 1px solid #D291BC;">
+      <div class="panel-content">
+        <div class="image"><img class = "person" src="https://images.pexels.com/photos/4428046/pexels-photo-4428046.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></div>
+          <div class="name-container">
+            <div class="name">Karen Smith</div>
+            <div class="rating">
+               <i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div class="text">
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aut, quod incidunt, tempora, laborum odit at eaque doloribus rerum facere."
+          </div>          
+      </div>   
+       <!--panel content  -->
+    </div>
+  </div>
 
-    panels.forEach(panel => {
-        panel.addEventListener('click', () => {
-            removeActiveClasses()
-            panel.classList.add('active')
-        })
-    })
+  <script>
+    const panels = document.querySelectorAll('.panel');
 
-    function removeActiveClasses() {
-        panels.forEach(panel => {
-            panel.classList.remove('active')
-        })
-    }
-</script>
+panels.forEach((panel) => {
+  panel.addEventListener('click', () => {
+    removeActiveClass();
+    panel.classList.add('active');
+  });
+});
+
+function removeActiveClass() {
+  panels.forEach((panel) => {
+    panel.classList.remove('active');
+  });
+}
+  </script>
