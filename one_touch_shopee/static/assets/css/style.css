@@ -4,6 +4,11 @@
   font-family: "gradus-font";
   src: url("../font/gradus-font/Fontspring-DEMO-gradus-bold.otf");
 }
+html,
+body {
+  scroll-behavior: auto !important;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -835,6 +840,135 @@ header .navbar .nav-item .nav-link:hover {
   background: rgba(174, 39, 139, 0.1);
   padding: 6px 17px;
 }
+.testimonial-section .content-box .slider-test {
+  display: flex;
+  width: 100%;
+}
+.testimonial-section .content-box .panel {
+  min-height: 50vh;
+  height: auto;
+  cursor: pointer;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  transition: flex 0.7s ease-in;
+  background: #d291bc;
+  border-radius: 30px;
+}
+.testimonial-section .content-box .panel .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonial-section .content-box .panel .top h6 {
+  color: #000;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  /* 25.52px */
+  letter-spacing: -1.1px;
+  transition: all 1s ease-in 0.4s;
+}
+.testimonial-section .content-box .panel .top p {
+  color: #626262;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%;
+  /* 21.76px */
+  letter-spacing: -0.8px;
+  transition: all 1s ease-in 0.4s;
+}
+.testimonial-section .content-box .panel .top span {
+  padding: 8px 14px;
+  margin: 0 7px 0 0;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #FFF;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  /* 20.88px */
+  letter-spacing: -0.9px;
+  background-color: #000;
+  transition: all 1s ease-in 0.4s;
+}
+.testimonial-section .content-box .panel .main-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+}
+.testimonial-section .content-box .panel .main-text-box p {
+  color: #626262;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 136%;
+}
+.testimonial-section .content-box .panel .bar {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.testimonial-section .content-box .panel .bar span {
+  padding: 8px 14px;
+  margin: 0 7px 0 0;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #FFF;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  letter-spacing: -0.9px;
+  background-color: #000;
+}
+.testimonial-section .content-box .panel-content {
+  transform: scale(0);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  padding: 50px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.7s ease-in;
+}
+.testimonial-section .content-box .panel.active {
+  flex: 4;
+  background: #fff;
+}
+.testimonial-section .content-box .panel.active .bar {
+  opacity: 0;
+}
+.testimonial-section .content-box .panel.active .panel-content {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 1.3s ease-in;
+}
 
 footer {
   background-color: #000000;
@@ -1187,25 +1321,6 @@ footer .copy-right-box .right .social-links {
   .testimonial-section .content-box .heading-box a {
     font-size: 12px;
   }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content {
-    padding: 25px;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .top p {
-    font-size: 12px;
-    line-height: normal;
-    margin: 0;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .top h6 {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .main-text-box p {
-    font-size: 16px;
-  }
-  .testimonial-section .content-box .slider-box .panel .bar {
-    width: 100%;
-    flex-direction: row;
-  }
   .testimonial-section .content-box .heading-box h3,
   .testimonial-section .content-box .heading-box h2 {
     font-size: 38px;
@@ -1511,6 +1626,9 @@ footer .copy-right-box .right .social-links {
     grid-template-columns: 1fr;
     place-items: flex-start;
   }
+  .testimonial-section .content-box .slider-test {
+    flex-direction: column;
+  }
   .testimonial-section .content-box .heading-box h2,
   .testimonial-section .content-box .heading-box h3 {
     padding: 0;
@@ -1518,29 +1636,31 @@ footer .copy-right-box .right .social-links {
   .testimonial-section .content-box .heading-box a {
     font-size: 12px;
   }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content {
-    padding: 25px;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .top p {
-    font-size: 12px;
-    line-height: normal;
-    margin: 0;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .top h6 {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .testimonial-section .content-box .slider-box .panel .testimonial-content .main-text-box p {
-    font-size: 12px;
-  }
-  .testimonial-section .content-box .slider-box .panel .bar {
-    width: 100%;
-    flex-direction: row;
-  }
   .testimonial-section .content-box .heading-box h3,
   .testimonial-section .content-box .heading-box h2 {
     font-size: 28px;
     line-height: normal;
+  }
+  .testimonial-section .content-box .panel-content {
+    padding: 20px;
+    transition: all 0.5s ease-in;
+  }
+  .testimonial-section .content-box .panel {
+    min-height: 10vh;
+    transition: all 0.5s ease-in;
+  }
+  .testimonial-section .content-box .panel .bar {
+    flex-direction: row;
+    padding: 13px 20px;
+  }
+  .testimonial-section .content-box .panel .main-text-box p {
+    font-size: 14px;
+  }
+  .testimonial-section .content-box .panel.active {
+    min-height: 50vh;
+  }
+  .testimonial-section .content-box .panel.active .panel-content {
+    transition: all 0.5s ease-in;
   }
   .testimonial-section .slider-box {
     flex-direction: column;
