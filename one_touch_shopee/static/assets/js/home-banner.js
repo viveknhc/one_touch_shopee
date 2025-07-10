@@ -31,15 +31,15 @@ var swiper = new Swiper(".productSwiper", {
     breakpoints: {
 
         200: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20
         },
         640: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20
         },
         767: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30
         },
 
