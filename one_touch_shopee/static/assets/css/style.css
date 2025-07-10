@@ -855,7 +855,7 @@ header .navbar .nav-item .nav-link:hover {
   flex-direction: column;
   align-items: space-between;
   justify-content: center;
-  transition: flex 0.7s ease-in;
+  transition: all 0.5s ease-in;
   background: #d291bc;
   border-radius: 30px;
 }
@@ -874,7 +874,7 @@ header .navbar .nav-item .nav-link:hover {
   line-height: 116%;
   /* 25.52px */
   letter-spacing: -1.1px;
-  transition: all 1s ease-in 0.4s;
+  transition: all 0.5s ease-in;
 }
 .testimonial-section .content-box .panel .top p {
   color: #626262;
@@ -886,7 +886,7 @@ header .navbar .nav-item .nav-link:hover {
   line-height: 136%;
   /* 21.76px */
   letter-spacing: -0.8px;
-  transition: all 1s ease-in 0.4s;
+  transition: all 0.5s ease-in;
 }
 .testimonial-section .content-box .panel .top span {
   padding: 8px 14px;
@@ -955,7 +955,7 @@ header .navbar .nav-item .nav-link:hover {
   padding: 50px;
   text-align: center;
   height: 100%;
-  transition: all 0.7s ease-in;
+  transition: all 0.5s ease-in;
 }
 .testimonial-section .content-box .panel.active {
   flex: 4;
@@ -967,7 +967,7 @@ header .navbar .nav-item .nav-link:hover {
 .testimonial-section .content-box .panel.active .panel-content {
   transform: scale(1);
   opacity: 1;
-  transition: all 1.3s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 footer {
@@ -1328,6 +1328,27 @@ footer .copy-right-box .right .social-links {
   }
   .testimonial-section .slider-box {
     flex-direction: column;
+  }
+  .testimonial-section .panel-content {
+    padding: 20px;
+    transition: all 0.5s ease-in;
+  }
+  .testimonial-section .panel {
+    min-height: 10vh;
+    transition: all 0.5s ease-in;
+  }
+  .testimonial-section .panel .bar {
+    flex-direction: row;
+    padding: 13px 20px;
+  }
+  .testimonial-section .panel .main-text-box p {
+    font-size: 14px;
+  }
+  .testimonial-section .panel.active {
+    min-height: 50vh;
+  }
+  .testimonial-section .panel.active .panel-content {
+    transition: all 0.5s ease-in;
   }
   .cta {
     padding: 30px 0;

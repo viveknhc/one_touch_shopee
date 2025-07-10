@@ -1100,7 +1100,7 @@ header {
             flex-direction: column;
             align-items: space-between;
             justify-content: center;
-            transition: flex 0.7s ease-in;
+             transition: all 0.5s ease-in;
             background: #d291bc;
             border-radius: 30px;
 
@@ -1120,7 +1120,7 @@ header {
                     /* 25.52px */
                     letter-spacing: -1.1px;
 
-                    transition: all 1s ease-in 0.4s;
+                     transition: all 0.5s ease-in;
                 }
 
                 p {
@@ -1134,7 +1134,7 @@ header {
                     /* 21.76px */
                     letter-spacing: -0.8px;
 
-                    transition: all 1s ease-in 0.4s;
+                  transition: all 0.5s ease-in;
                 }
 
                 span {
@@ -1219,7 +1219,7 @@ header {
             padding: 50px;
             text-align: center;
             height: 100%;
-            transition: all 0.7s ease-in;
+            transition: all 0.5s ease-in;
         }
 
 
@@ -1236,7 +1236,7 @@ header {
         .panel.active .panel-content {
             transform: scale(1);
             opacity: 1;
-            transition: all 1.3s ease-in;
+            transition: all 0.5s ease-in;
         }
     }
 
@@ -1742,6 +1742,37 @@ footer {
         .slider-box {
             flex-direction: column;
         }
+
+             .panel-content{
+                padding: 20px;
+              transition: all 0.5s ease-in;
+            }
+
+            .panel {
+                min-height: 10vh;
+                transition: all 0.5s ease-in;
+
+                .bar {
+                    flex-direction: row;
+
+                    padding: 13px 20px;
+                }
+
+                .main-text-box{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .panel.active {
+                min-height: 50vh;
+
+                .panel-content{
+                    transition: all 0.5s ease-in;
+                }
+            }
+
     }
 
     .cta {
